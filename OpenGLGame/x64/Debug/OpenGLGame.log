@@ -1,4 +1,5 @@
 ﻿  main.cpp
   OGame.cpp
+  OWindow.cpp
   Generating Code...
-  OpenGLGame.vcxproj -> C:\Users\lionp\OneDrive\OpenGLGame\OpenGLGame\x64\Debug\OpenGLGame.exe
+  OpenGLGame.vcxproj -> C:\Users\lionp\OneDrive\openGL\OpenGLProject\x64\Debug\OpenGLGame.exe

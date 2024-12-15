@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lionp\\OneDrive\\openGL\\OpenGLProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F4FB646D-9B44-4E19-9ACE-85A4BF5FFB26}|OpenGLGame.vcxproj|C:\\Users\\lionp\\OneDrive\\openGL\\OpenGLProject\\Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4FB646D-9B44-4E19-9ACE-85A4BF5FFB26}|OpenGLGame.vcxproj|solutionrelative:Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\lionp\\OneDrive\\openGL\\OpenGLProject\\Game\\main.cpp",
+              "RelativeDocumentMoniker": "Game\\main.cpp",
+              "ToolTip": "C:\\Users\\lionp\\OneDrive\\openGL\\OpenGLProject\\Game\\main.cpp",
+              "RelativeToolTip": "Game\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-15T09:29:20.456Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
