@@ -1,30 +1,39 @@
 #include <OGL3D/Game/OGame.h>
 #include <OGL3D/Window/OWindow.h>
-#include <Windows.h>
+#include <OGL3D/Graphics/OGraphicsEngine.h>
+
 
 OGame::OGame()
 {
-	m_display = std::unique_ptr<OWindow>(new OWindow());
+	m_graphicsEngine = std::make_unique<OGraphicsEngine>();
+	m_display = std::make_unique<OWindow>();
+
+	m_display->makeCurrentContext();
 }
 
 OGame::~OGame()
 {
 }
 
-void OGame::run()
+void OGame::onCreate()
 {
-	MSG msg;
-	while(m_isRunning  && !m_display->isClosed())
-	{
-		if (PeekMessage(&msg, NULL, NULL, NULL, PM_REMOVE))
-		{
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
-		}
 
-		Sleep(1);
-	}
 }
+
+void OGame::onUpdate()
+{
+	m_graphicsEngine->clear(OVec4(1, 0, 0, 1));
+
+
+	m_display->present(false);
+}
+
+void OGame::onQuit()
+{
+
+}
+
+
 
 void OGame::quit()
 {
