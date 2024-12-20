@@ -96,6 +96,13 @@ OWindow::~OWindow()
 	DestroyWindow((HWND)m_handle);
 }
 
+ORect OWindow::getInnerSize()
+{
+	RECT rc = {};
+	GetClientRect((HWND)m_handle, &rc);
+	return ORect(rc.right-rc.left, rc.bottom-rc.top);
+}
+
 void OWindow::makeCurrentContext()
 {
 	wglMakeCurrent(GetDC(HWND(m_handle)), HGLRC(m_context));
