@@ -23,13 +23,32 @@ void OGame::onCreate()
 	const f32 triangleVerties[] =
 	{
 		-0.5f, -0.5f, 0.0f,
+		1,		0,		0, 
 		0.5f, -0.5f, 0.0f,
-		0.0f, 0.5f, 0.0f
+		0,		1,		0,
+		0.0f, 0.5f, 0.0f,
+		0,		0,		1
 	};
 
+	 OVertexAttribute attribsList[] = {
+		3, //position
+		3 // color
+	};
 
-	m_triangleVAO = m_graphicsEngine->createVertexArrayObject({(void*)triangleVerties, sizeof(f32) * 3, 3});
-	
+	m_triangleVAO = m_graphicsEngine->createVertexArrayObject(
+		{
+			(void*)triangleVerties, 
+			sizeof(f32) * (3+3),
+			3,
+			attribsList,
+			2
+		});
+	m_shader = m_graphicsEngine->createShaderProgram(
+		{
+			L"Assets/Shaders/BasicShader.vert",  
+			L"Assets/Shaders/BasicShader.frag"
+		}
+	);
 }
 
 void OGame::onUpdate()
@@ -37,7 +56,7 @@ void OGame::onUpdate()
 	m_graphicsEngine->clear(OVec4(1, 0, 0, 1));
 
 	m_graphicsEngine->setVertexArrayObject(m_triangleVAO);
-	
+	m_graphicsEngine->setShaderProgram(m_shader);
 	m_graphicsEngine->drawTriangles(m_triangleVAO->getVertexBufferSize(), 0);
 
 	m_display->present(false);
